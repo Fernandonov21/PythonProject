@@ -59,11 +59,19 @@ Once the dependencies are installed, run the app with the following command:
     ```
 Access the application:
 Open your web browser and go to http://127.0.0.1:5000 to see the "Hello, World!" message.    
-![image](https://github.com/user-attachments/assets/2254e28b-29f9-4a86-aaea-37eefa4839e5)
-   
+                        ![image](https://github.com/user-attachments/assets/2254e28b-29f9-4a86-aaea-37eefa4839e5)
 
-    
-
-
+## How to configure a docker image
+The project has already a docker file so the only thing that you need is up the container
+1. In the terminal (you can use Command Prompt, PowerShell, or the VS Code integrated terminal), navigate to the project folder and execute the next command:
+```bash
+docker build -t pythonproject .
+```
+2. run the image
+```bash
+docker run -p 5000:5000 pythonproject
+```
+## IMPORTANT
+To access the application at http://localhost:5000, ensure that port 5000 is available. If the port is already in use, stop any process occupying it and try running the command again.
 
    
